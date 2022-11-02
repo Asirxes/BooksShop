@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karolek\\RiderProjects\\Books\\Book.Utility\\Book.Utility.csproj": {}
+    "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Utility\\Book.Utility.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karolek\\RiderProjects\\Books\\Book.Utility\\Book.Utility.csproj": {
+    "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Utility\\Book.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karolek\\RiderProjects\\Books\\Book.Utility\\Book.Utility.csproj",
+        "projectUniqueName": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Utility\\Book.Utility.csproj",
         "projectName": "Book.Utility",
-        "projectPath": "C:\\Users\\Karolek\\RiderProjects\\Books\\Book.Utility\\Book.Utility.csproj",
+        "projectPath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Utility\\Book.Utility.csproj",
         "packagesPath": "C:\\Users\\Karolek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karolek\\RiderProjects\\Books\\Book.Utility\\obj\\",
+        "outputPath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

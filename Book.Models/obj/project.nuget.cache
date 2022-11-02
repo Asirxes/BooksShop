@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uBy0OI/osAxGHCBfwoeNIVJcJpTC/GjIBupxlFFo6sgZk0X/6/d2lEojHJq3aqgxvgFBzFvLk0Kq0PEto3b40A==",
+  "dgSpecHash": "HK4T7JgOBHQd1GOKnuyXJQIqRQuAFVqR6RkyZyVG+qo8K3aRmwWnPgoBeMTHzU7AiPmB/jULwblARFL15I6xmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karolek\\RiderProjects\\Books\\Book.Models\\Book.Models.csproj",
+  "projectFilePath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Models\\Book.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karolek\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

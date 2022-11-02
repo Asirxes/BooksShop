@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aC9jzyLP0ID4Brz+zkvtEufwk/FoHyEuXwfuoDEZmKKRNIxppb0mlCEm9slNZXjLAnQzmEFkPODoTZa0ocxZtA==",
+  "dgSpecHash": "BImYuoEDjBuAZh+waYEwozoPEju5jGs+/i6jQb1dbt/5myP+7by3L2axr21Q9rQwpPeIx1Wkyg5AUytzDPxL0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karolek\\RiderProjects\\Books\\BookWeb\\BookWeb.csproj",
+  "projectFilePath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\BookWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karolek\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

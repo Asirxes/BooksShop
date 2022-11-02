@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VasvojoNlhbgU2irzoUgPedVU5YIHk53rNTA4cT+eqrRtK6BSHVJFJKKmbjw7o2rGTKjhf0BKbOrI8l1a1RSxw==",
+  "dgSpecHash": "QJpGYVpq9dqbx3Mku//s2tFigh1XMuNGU8J+dzIc6QzjWTyoI+tG54wKgpt0N45aWh+yzuJl0zWaTCDZ0SA2yA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karolek\\RiderProjects\\Books\\Book.DataAccess\\Book.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.DataAccess\\Book.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karolek\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
