@@ -1,0 +1,14 @@
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\bin\Debug\net6.0\Book.Utility.deps.json
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\bin\Debug\net6.0\Book.Utility.dll
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\bin\Debug\net6.0\Book.Utility.pdb
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.csproj.AssemblyReference.cache
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.AssemblyInfoInputs.cache
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.AssemblyInfo.cs
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.dll
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\refint\Book.Utility.dll
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.pdb
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\ref\Book.Utility.dll
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\bin\Debug\net6.0\Book.Utility.runtimeconfig.json
+C:\Users\Karolek\RiderProjects\Book\Book.Utility\obj\Debug\net6.0\Book.Utility.genruntimeconfig.cache
