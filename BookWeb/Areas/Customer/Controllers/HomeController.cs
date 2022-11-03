@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Book.DataAccess.Repository.IRepository;
 using Book.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,14 +10,32 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    private readonly IUnitOfWork _unitOfWork;
+
+    public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
     {
         _logger = logger;
+
+        _unitOfWork = unitOfWork;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var productList = _unitOfWork.Product.GetAll("Category,CoverType");
+
+        return View(productList);
+    }
+
+    public IActionResult Details(int id)
+    {
+        ShoppingCart CartObj = new()
+        {
+            Count = 1,
+
+            Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id, "Category,CoverType")
+        };
+
+        return View(CartObj);
     }
 
     public IActionResult Privacy()
