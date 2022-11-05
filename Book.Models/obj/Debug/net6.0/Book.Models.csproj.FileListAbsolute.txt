@@ -58,7 +58,6 @@ C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\bin\Debug\net6.0\Microsoft.
 C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\bin\Debug\net6.0\Microsoft.Extensions.Localization.dll
 C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
-C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\bin\Debug\net6.0\System.Security.Cryptography.Xml.dll
 C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Karolek\RiderProjects\BooksShop\Book.Models\obj\Debug\net6.0\Book.Models.csproj.CopyComplete

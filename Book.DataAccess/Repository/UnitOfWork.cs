@@ -15,6 +15,8 @@ public class UnitOfWork : IUnitOfWork
         CoverType = new CoverTypeRepository(db);
 
         Product = new ProductRepository(db);
+
+        Company = new CompanyRepository(db);
     }
 
     public ICategoryRepository Category { get; }
@@ -22,6 +24,8 @@ public class UnitOfWork : IUnitOfWork
     public ICoverTypeRepository CoverType { get; }
 
     public IProductRepository Product { get; }
+
+    public ICompanyRepository Company { get; }
 
     public void Save()
     {

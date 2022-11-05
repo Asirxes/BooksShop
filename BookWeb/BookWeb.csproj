@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
             <PrivateAssets>all</PrivateAssets>
@@ -23,6 +24,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Book.DataAccess\Book.DataAccess.csproj"/>
+        <ProjectReference Include="..\Book.Utility\Book.Utility.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
