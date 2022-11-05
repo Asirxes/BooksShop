@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Book.Models;
 
-public class AppliactionUser : IdentityUser
+public class ApplicationUser : IdentityUser
 {
     [Required] public string Name { get; set; }
 

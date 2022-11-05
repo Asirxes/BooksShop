@@ -17,9 +17,10 @@ public class Repository<T> : IRepository<T> where T : class
         dbSet = _db.Set<T>();
     }
 
-    public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
+    public T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
     {
         IQueryable<T> query = dbSet;
+
 
         query = query.Where(filter);
 
@@ -31,9 +32,12 @@ public class Repository<T> : IRepository<T> where T : class
         return query.FirstOrDefault();
     }
 
-    public IEnumerable<T> GetAll(string? includeProperties = null)
+    public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter, string? includeProperties = null)
     {
         IQueryable<T> query = dbSet;
+
+        if (filter != null) query = query.Where(filter);
+
 
         if (includeProperties != null)
             foreach (var inclueProp in includeProperties.Split(new[] { ',' },

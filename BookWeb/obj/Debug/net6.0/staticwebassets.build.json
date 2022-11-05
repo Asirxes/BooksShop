@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NyYDS/5HFF1YHg3gSwWotk03z2E33Mt0UDwmrFJUVnE=",
+  "Hash": "RAS1njbuWE3e8Yc5ME2A5OSRYoqfBIeElHYM/FIw6hU=",
   "Source": "BookWeb",
   "BasePath": "_content/BookWeb",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\49061d42-2fb9-4ad5-9220-aec335d724bc.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\images\\products\\9bf57f09-af91-4cbd-a253-1fd14ab94883.jpg",
+      "SourceId": "BookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\",
+      "BasePath": "_content/BookWeb",
+      "RelativePath": "images/products/9bf57f09-af91-4cbd-a253-1fd14ab94883.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\9bf57f09-af91-4cbd-a253-1fd14ab94883.jpg"
     },
     {
       "Identity": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\js\\company.js",

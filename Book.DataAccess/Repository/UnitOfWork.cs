@@ -10,13 +10,17 @@ public class UnitOfWork : IUnitOfWork
     {
         _db = db;
 
-        Category = new CategoryRepository(db);
+        Category = new CategoryRepository(_db);
 
-        CoverType = new CoverTypeRepository(db);
+        CoverType = new CoverTypeRepository(_db);
 
-        Product = new ProductRepository(db);
+        Product = new ProductRepository(_db);
 
-        Company = new CompanyRepository(db);
+        Company = new CompanyRepository(_db);
+
+        ApplicationUser = new ApplicationUserRepository(_db);
+
+        ShoppingCart = new ShoppingCartRepository(_db);
     }
 
     public ICategoryRepository Category { get; }
@@ -26,6 +30,10 @@ public class UnitOfWork : IUnitOfWork
     public IProductRepository Product { get; }
 
     public ICompanyRepository Company { get; }
+
+    public IShoppingCartRepository ShoppingCart { get; }
+
+    public IApplicationUserRepository ApplicationUser { get; }
 
     public void Save()
     {

@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
+using System.Security.Claims;
 using Book.DataAccess.Repository.IRepository;
 using Book.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookWeb.Controllers;
@@ -21,21 +23,46 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var productList = _unitOfWork.Product.GetAll("Category,CoverType");
+        var productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
 
         return View(productList);
     }
 
-    public IActionResult Details(int id)
+    public IActionResult Details(int productId)
     {
         ShoppingCart CartObj = new()
         {
             Count = 1,
 
-            Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id, "Category,CoverType")
+            ProductId = productId,
+
+            Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == productId, "Category,CoverType")
         };
 
         return View(CartObj);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Authorize]
+    public IActionResult Details(ShoppingCart shoppingCart)
+    {
+        var claimsIdentity = (ClaimsIdentity)User.Identity;
+
+        var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+
+        shoppingCart.ApplicationUserId = claim.Value;
+
+        var cartFromDb = _unitOfWork.ShoppingCart.GetFirstOrDefault(u =>
+            u.ApplicationUserId == claim.Value && u.ProductId == shoppingCart.ProductId);
+
+        if (cartFromDb == null)
+            _unitOfWork.ShoppingCart.Add(shoppingCart);
+        else
+            _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
+        _unitOfWork.Save();
+
+        return RedirectToAction(nameof(Index));
     }
 
     public IActionResult Privacy()

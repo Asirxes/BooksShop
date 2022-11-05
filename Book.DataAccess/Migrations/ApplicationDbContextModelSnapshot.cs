@@ -150,6 +150,33 @@ namespace Book.DataAccess.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Book.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ShoppingCart");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -354,7 +381,7 @@ namespace Book.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Book.Models.AppliactionUser", b =>
+            modelBuilder.Entity("Book.Models.ApplicationUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
@@ -380,7 +407,7 @@ namespace Book.DataAccess.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.HasDiscriminator().HasValue("AppliactionUser");
+                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("Book.Models.Product", b =>
@@ -400,6 +427,25 @@ namespace Book.DataAccess.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("CoverType");
+                });
+
+            modelBuilder.Entity("Book.Models.ShoppingCart", b =>
+                {
+                    b.HasOne("Book.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Book.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -453,7 +499,7 @@ namespace Book.DataAccess.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Book.Models.AppliactionUser", b =>
+            modelBuilder.Entity("Book.Models.ApplicationUser", b =>
                 {
                     b.HasOne("Book.Models.Company", "Company")
                         .WithMany()
