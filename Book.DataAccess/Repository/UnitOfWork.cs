@@ -21,6 +21,10 @@ public class UnitOfWork : IUnitOfWork
         ApplicationUser = new ApplicationUserRepository(_db);
 
         ShoppingCart = new ShoppingCartRepository(_db);
+
+        OrderHeader = new OrderHeaderRepository(_db);
+
+        OrderDetail = new OrderDetailRepository(_db);
     }
 
     public ICategoryRepository Category { get; }
@@ -34,6 +38,10 @@ public class UnitOfWork : IUnitOfWork
     public IShoppingCartRepository ShoppingCart { get; }
 
     public IApplicationUserRepository ApplicationUser { get; }
+
+    public IOrderHeaderRepository OrderHeader { get; }
+
+    public IOrderDetailRepository OrderDetail { get; }
 
     public void Save()
     {

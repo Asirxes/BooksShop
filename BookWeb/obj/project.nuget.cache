@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uhCB2dYYFMZBs/LeFeAkhpdvRyip/AatCNAdZbC5UCQWaJPSG0u+gpabyHys2S6LdXs8y9SKFzlY1Wi7+x6DHw==",
+  "dgSpecHash": "zFb39X4L83ZA5KfOpulBC5+SsR36Zzh8br7OyvTazNLpaXfHupo79xgvew6swcNmca/98+xUi80UMRMV5OyQ9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\BookWeb.csproj",
   "expectedPackageFiles": [
@@ -124,6 +124,7 @@
     "C:\\Users\\Karolek\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Karolek\\.nuget\\packages\\stripe.net\\39.119.0\\stripe.net.39.119.0.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Karolek\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

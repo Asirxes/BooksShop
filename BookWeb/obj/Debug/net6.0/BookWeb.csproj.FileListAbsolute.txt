@@ -410,3 +410,4 @@ C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Microsoft.AspN
 C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Book.Utility.dll
 C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Book.Utility.pdb
+C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Stripe.net.dll
