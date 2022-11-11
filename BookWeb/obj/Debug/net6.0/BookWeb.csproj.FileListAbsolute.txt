@@ -411,3 +411,9 @@ C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Microsoft.Exte
 C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Book.Utility.dll
 C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Book.Utility.pdb
 C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Stripe.net.dll
+C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\MailKit.dll
+C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\SendGrid.dll
+C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\Karolek\RiderProjects\BooksShop\BookWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Facebook.dll

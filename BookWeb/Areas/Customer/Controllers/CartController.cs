@@ -4,6 +4,7 @@ using Book.Models;
 using Book.Models.ViewModels;
 using Book.Utility;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Stripe.Checkout;
 
@@ -15,9 +16,13 @@ public class CartController : Controller
 {
     private readonly IUnitOfWork _unitOfWork;
 
-    public CartController(IUnitOfWork unitOfWork)
+    private readonly IEmailSender _emailSender;
+
+    public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender)
     {
         _unitOfWork = unitOfWork;
+
+        _emailSender = emailSender;
     }
 
     [BindProperty] public ShoppingCartVM ShoppingCartVM { get; set; }
@@ -196,7 +201,8 @@ public class CartController : Controller
 
     public IActionResult OrderConfirmation(int id)
     {
-        var orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id);
+        OrderHeader orderHeader =
+            _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id, includeProperties: "ApplicationUser");
 
         if (orderHeader.PaymentStatus != SD.PaymentStatusDelayedPayment)
         {
@@ -211,6 +217,8 @@ public class CartController : Controller
                 _unitOfWork.Save();
             }
         }
+
+        _emailSender.SendEmailAsync(orderHeader.ApplicationUser.Email, "New Order - Book", "<p>New Order Created</p>");
 
 
         var shoppingCarts = _unitOfWork.ShoppingCart
@@ -239,7 +247,14 @@ public class CartController : Controller
         var cart = _unitOfWork.ShoppingCart.GetFirstOrDefault(u => u.Id == cartId);
 
         if (cart.Count <= 1)
+        {
             _unitOfWork.ShoppingCart.Remove(cart);
+            var count = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).ToList()
+                .Count - 1;
+            HttpContext.Session.SetInt32(SD.SessionCart, count);
+        }
+
+
         else
             _unitOfWork.ShoppingCart.DecrementCount(cart, 1);
 
@@ -255,6 +270,9 @@ public class CartController : Controller
         _unitOfWork.ShoppingCart.Remove(cart);
 
         _unitOfWork.Save();
+
+        var count = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cart.ApplicationUserId).ToList().Count;
+        HttpContext.Session.SetInt32(SD.SessionCart, count);
 
         return RedirectToAction(nameof(Index));
     }

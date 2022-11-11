@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using Book.DataAccess.Repository.IRepository;
 using Book.Models;
+using Book.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -57,10 +58,19 @@ public class HomeController : Controller
             u.ApplicationUserId == claim.Value && u.ProductId == shoppingCart.ProductId);
 
         if (cartFromDb == null)
+        {
             _unitOfWork.ShoppingCart.Add(shoppingCart);
+            _unitOfWork.Save();
+            HttpContext.Session.SetInt32(SD.SessionCart,
+                _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count);
+        }
+
         else
+        {
             _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
-        _unitOfWork.Save();
+            _unitOfWork.Save();
+        }
+            
 
         return RedirectToAction(nameof(Index));
     }
