@@ -14,7 +14,7 @@ public static class SD
 
     public const string StatusApproved = "Approved";
 
-    public const string StatusInProcess = "Process";
+    public const string StatusInProcess = "Processing";
 
     public const string StatusShipped = "Shipped";
 

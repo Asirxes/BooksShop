@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L55rpMhy/bdqGTmqxTWYncugDe6kgrvI66f7n0Hhlhw=",
+  "Hash": "U+Mj5+bbSKCfb3Luh68bheLu1Z8TOcYie8JZkBBaJ6Q=",
   "Source": "BookWeb",
   "BasePath": "_content/BookWeb",
   "Mode": "Default",
@@ -1190,6 +1190,40 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\a27aadca-85e3-4e63-ba34-7f37310eb748.jpg"
     },
     {
+      "Identity": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\images\\products\\cd60e8fb-6ffb-4230-818c-eea2fc6b355a.jpg",
+      "SourceId": "BookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\",
+      "BasePath": "_content/BookWeb",
+      "RelativePath": "images/products/cd60e8fb-6ffb-4230-818c-eea2fc6b355a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\cd60e8fb-6ffb-4230-818c-eea2fc6b355a.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\images\\products\\d580c537-7736-4e20-b1b6-e965799c3817.jpg",
+      "SourceId": "BookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\",
+      "BasePath": "_content/BookWeb",
+      "RelativePath": "images/products/d580c537-7736-4e20-b1b6-e965799c3817.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\d580c537-7736-4e20-b1b6-e965799c3817.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\js\\company.js",
       "SourceId": "BookWeb",
       "SourceType": "Discovered",
@@ -1205,6 +1239,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\company.js"
+    },
+    {
+      "Identity": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\js\\order.js",
+      "SourceId": "BookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\",
+      "BasePath": "_content/BookWeb",
+      "RelativePath": "js/order.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\order.js"
     },
     {
       "Identity": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\BookWeb\\wwwroot\\js\\product.js",
