@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http
-@using Book.Utility
+﻿@using Book.Utility
 @inject IHttpContextAccessor HttpContextAccessor
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +36,8 @@
                                 <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a>
                             </div>
                         </li>
                     }
@@ -48,7 +49,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class=nav-link asp-area="Customer" asp-controller="Cart" asp-action="Index">
+                        <a class="nav-link" asp-area="Customer" asp-controller="Cart" asp-action="Index">
                             @await Component.InvokeAsync("ShoppingCart")
                         </a>
                     </li>

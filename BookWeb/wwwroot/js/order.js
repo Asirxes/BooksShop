@@ -9,9 +9,9 @@ $(document).ready(function () {
         loadDataTable("completed");
     } else if (url.includes("pending")) {
         loadDataTable("pending");
-    }else if (url.includes("approved")) {
+    } else if (url.includes("approved")) {
         loadDataTable("approved");
-    }  else{
+    } else {
         loadDataTable("all");
     }
 })

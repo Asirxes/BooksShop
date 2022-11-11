@@ -14,9 +14,8 @@ namespace BookWeb.Controllers;
 [Area("Customer")]
 public class CartController : Controller
 {
-    private readonly IUnitOfWork _unitOfWork;
-
     private readonly IEmailSender _emailSender;
+    private readonly IUnitOfWork _unitOfWork;
 
     public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender)
     {
@@ -201,8 +200,8 @@ public class CartController : Controller
 
     public IActionResult OrderConfirmation(int id)
     {
-        OrderHeader orderHeader =
-            _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id, includeProperties: "ApplicationUser");
+        var orderHeader =
+            _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id, "ApplicationUser");
 
         if (orderHeader.PaymentStatus != SD.PaymentStatusDelayedPayment)
         {
@@ -223,6 +222,8 @@ public class CartController : Controller
 
         var shoppingCarts = _unitOfWork.ShoppingCart
             .GetAll(u => u.ApplicationUserId == orderHeader.ApplicationUserId).ToList();
+
+        HttpContext.Session.Clear();
 
         _unitOfWork.ShoppingCart.RemoveRange(shoppingCarts);
 
@@ -256,7 +257,9 @@ public class CartController : Controller
 
 
         else
+        {
             _unitOfWork.ShoppingCart.DecrementCount(cart, 1);
+        }
 
         _unitOfWork.Save();
 

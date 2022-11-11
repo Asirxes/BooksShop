@@ -70,7 +70,7 @@ public class HomeController : Controller
             _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
             _unitOfWork.Save();
         }
-            
+
 
         return RedirectToAction(nameof(Index));
     }

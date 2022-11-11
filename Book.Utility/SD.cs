@@ -29,6 +29,6 @@ public static class SD
     public const string PaymentStatusDelayedPayment = "ApprovedForDelayedPaymen";
 
     public const string PaymentStatusRejected = "Rejected";
-    
+
     public const string SessionCart = "SessionShoppingCart";
 }
