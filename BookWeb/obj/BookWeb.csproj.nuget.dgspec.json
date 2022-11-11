@@ -35,6 +35,9 @@
             "projectReferences": {
               "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Models\\Book.Models.csproj": {
                 "projectPath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Models\\Book.Models.csproj"
+              },
+              "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Utility\\Book.Utility.csproj": {
+                "projectPath": "C:\\Users\\Karolek\\RiderProjects\\BooksShop\\Book.Utility\\Book.Utility.csproj"
               }
             }
           }

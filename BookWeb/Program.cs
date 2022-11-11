@@ -1,4 +1,5 @@
 using Book.DataAccess;
+using Book.DataAccess.DbInitializer;
 using Book.DataAccess.Repository;
 using Book.DataAccess.Repository.IRepository;
 using Book.Utility;
@@ -22,6 +23,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProvid
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
@@ -66,6 +69,8 @@ app.UseRouting();
 
 StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
+SeedDatabase();
+
 app.UseAuthentication();
 
 app.UseAuthorization();
@@ -79,3 +84,13 @@ app.MapControllerRoute(
     "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        
+        dbInitializer.Initialize();
+    }
+}
