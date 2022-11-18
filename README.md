@@ -4,7 +4,7 @@ Online book store application created for using .NET MVC and Razor Pages. Provid
 
 Thanks to the azure service, the application is available at https://asirxesbookstore.azurewebsites.net/
 
-To use the project, you need to create a fake account or register via facebook. You will be logged in automatically. Then you can add books to your shopping cart. Then you can buy them and make fake payment using stripe (input these for stripe: test@gmail.com,4242424242424242,123,08/26,testtest).
+To use the project, you need to create a fake account or register via facebook. You will be logged in automatically. Then you can add books to your shopping cart. Then you can buy them and make fake payment using stripe (input these for stripe: test@gmail.com, 4242424242424242, 123, 08/26, test test).
 
 Thanks to the panel in the upper right corner by clicking hello {your name} button you can edit your profile.
 
